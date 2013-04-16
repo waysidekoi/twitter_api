@@ -1,0 +1,21 @@
+<h2>Twitter Feed</h2>
+
+<h3>
+  Username: <%= @user.username %><br>
+  Name: <%= @user.name %><br>
+</h3>
+
+<h4>
+  Description: <%= @user.description %><br>
+  Followers: <%= @user.followers_count %><br>
+  Friends: <%= @user.friends_count %><br>
+</h4>
+
+<% if @tweets %>
+<% @tweets.each do |tweet| %>
+<ul>
+  <li>Created at: <%= tweet.created_at %></li>
+  <li><%= tweet.text %></li>
+</ul>
+<% end %>
+<% end %>
